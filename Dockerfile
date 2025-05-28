@@ -5,16 +5,17 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY ./Birthday/package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install && \
+    npm install -g http-server
 
 # Copy all project files
-COPY . .
+COPY ./Birthday .
 
-# Expose the port the app runs on
-EXPOSE 8081
+# # Expose the port the app runs on
+# EXPOSE 8081
 
 # Command to run the application
-CMD ["npm", "run", "server-node"] 
+# CMD ["npm", "run", "server-node"] 
