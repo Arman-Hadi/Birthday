@@ -14,8 +14,8 @@ RUN npm install && \
 # Copy all project files
 COPY . .
 
-# # Expose the port the app runs on
-# EXPOSE 8081
+# Expose the port the app runs on
+EXPOSE 8081
 
 # Command to run the application
 # CMD ["npm", "run", "server-node"] 
