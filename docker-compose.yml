@@ -5,9 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: "npm run server-node"
+    command: "npx http-server -p 20000"
     ports:
-      - "8081:8081"
+      - 20000:20000
     volumes:
       - ./:/app
       - ./node_modules:/app/node_modules
